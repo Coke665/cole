@@ -21,8 +21,8 @@ team_data <- tibble(
            "member 3", "member 4"),
   github_username = c("mcgregors-garden", "username 1", "username 2", 
                       "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
+  colour = c("powderblue", "red", "yellow", 
+             "blue", "purple"),
   hobby = c("Hopping", "hobby 1", "hobby 2", 
             "hobby 3", "hobby 4"),
   favourite_number = c(2, 3, 5, 7, 9)
@@ -39,10 +39,9 @@ We now work on visualising our data.
 p1 <- ggplot(data = team_data, 
              mapping = aes(x = github_username, 
                            y = favourite_number,
-                           fill = colour), 
-             ) +
-   geom_col() +
-   scale_fill_identity()
+                           fill = colour)) +
+  geom_col() + 
+  scale_fill_identity()
 p1
 ```
 
